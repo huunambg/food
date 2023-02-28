@@ -35,7 +35,7 @@ class _OnbordingpageState extends State<Onbordingpage> {
             width: double.infinity,
             decoration: BoxDecoration(
                 image: DecorationImage(
-                    image: AssetImage("assets/img1.png"), fit: BoxFit.cover)),
+                    image: AssetImage("assets/img1.png"), fit: BoxFit.cover)),//anh nen
             child: Column(
               mainAxisAlignment: MainAxisAlignment.end,
               children: [

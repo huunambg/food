@@ -48,7 +48,7 @@ class _HomepageState extends State<Homepage> {
           images: item['images'],
           kg: item['kg'],
           detail: item['detail']);
-          hihi.add(ob);
+      hihi.add(ob);
     }
     return await this.handler.insertFruit(hihi);
   }
@@ -59,7 +59,7 @@ class _HomepageState extends State<Homepage> {
     super.initState();
     this.handler = DatabaseHandler();
     this.handler.initializeDB().whenComplete(() async {
-       await this.addFruit();
+      await this.addFruit();
       setState(() {});
     });
   }
@@ -67,7 +67,7 @@ class _HomepageState extends State<Homepage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        appBar: CusstomAppBar(context),
+        appBar: CusstomAppBar(context), //Appbar
         body: ListView(
           padding: EdgeInsets.all(15),
           children: [
@@ -77,7 +77,6 @@ class _HomepageState extends State<Homepage> {
                 children: [
                   Container(
                     // form Seach store
-
                     decoration: BoxDecoration(
                         color: Color.fromRGBO(242, 243, 242, 1),
                         borderRadius: BorderRadius.circular(15)),
@@ -102,7 +101,6 @@ class _HomepageState extends State<Homepage> {
                   SizedBox(
                     height: 10,
                   ),
-
                   CustomBanner(), //banner
                   SizedBox(
                     height: 15,

@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:foob_ok/const/colors.dart';
 import 'package:foob_ok/model/class.dart';
+import 'package:foob_ok/Screens/detail/components/custom_floatingactionbutton.dart';
 import 'package:foob_ok/widgets/custom_text.dart';
 import 'package:ionicons/ionicons.dart';
 
@@ -47,6 +48,7 @@ class _DetailState extends State<Detail> {
               ],
             ),
           ),
+          //phan thong tin san pham
           Container(
             margin: EdgeInsets.only(top: 15),
             padding: EdgeInsets.only(left: 12, right: 12),
@@ -194,22 +196,8 @@ class _DetailState extends State<Detail> {
         ],
       ),
       //button
-      floatingActionButton: GestureDetector(
-        onTap: () {},
-        child: Container(
-          height: 57,
-          width: 350,
-          decoration: BoxDecoration(
-              color: AppColor.green, borderRadius: BorderRadius.circular(15)),
-          child: Center(
-            child: Text(
-              "Add To Basket",
-              style:
-                  TextStyle(fontWeight: FontWeight.bold, color: Colors.white),
-            ),
-          ),
-        ),
-      ),
+      floatingActionButton:
+          CusstomFloatingActionButton(onpresed: () {}, text: "Add To Basket"),
       floatingActionButtonLocation: FloatingActionButtonLocation.centerFloat,
     );
   }
