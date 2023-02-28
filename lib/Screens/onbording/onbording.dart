@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'home/home.dart';
+import '../home/home.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 class Onbording extends StatelessWidget {
@@ -37,7 +37,8 @@ class _OnbordingpageState extends State<Onbordingpage> {
           Positioned(
             bottom: 50,
             left: 28,
-            child: Column(
+            child:Column(
+              mainAxisAlignment: MainAxisAlignment.end,
               children: [
                 Icon(
                   Icons.apple,
@@ -75,8 +76,10 @@ class _OnbordingpageState extends State<Onbordingpage> {
                     width: 330,
                     child: TextButton(
                         onPressed: () {
-                          Navigator.push(context,
-                              MaterialPageRoute(builder: (context) => Home()));
+                          Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                  builder: (context) => Home()));
                         },
                         child: Text(
                           "Get Started",

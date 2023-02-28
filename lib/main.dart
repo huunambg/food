@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'Screens/home/home.dart';
-import 'Screens/onbording.dart';
+import 'Screens/onbording/onbording.dart';
 
 void main() {
   runApp(MyApp());

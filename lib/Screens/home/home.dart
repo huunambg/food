@@ -2,7 +2,7 @@ import 'dart:convert';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:foob_ok/Screens/detail/detail.dart';
-import 'package:foob_ok/Screens/onbording.dart';
+import 'package:foob_ok/Screens/onbording/onbording.dart';
 import 'package:foob_ok/model/data.dart';
 import 'package:foob_ok/widgets/cusstom_appbar.dart';
 import 'package:foob_ok/widgets/custom_bottombar.dart';
