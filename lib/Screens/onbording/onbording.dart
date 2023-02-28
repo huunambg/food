@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import '../home/home.dart';
-import 'package:google_fonts/google_fonts.dart';
+import 'package:foob_ok/Screens/home/home.dart';
+import 'package:foob_ok/widgets/custom_text.dart';
 
 class Onbording extends StatelessWidget {
   const Onbording({super.key});
@@ -13,6 +13,7 @@ class Onbording extends StatelessWidget {
     );
   }
 }
+
 // Man hinh Onbording
 class Onbordingpage extends StatefulWidget {
   const Onbordingpage({super.key});
@@ -27,17 +28,15 @@ class _OnbordingpageState extends State<Onbordingpage> {
     return Scaffold(
       body: Stack(
         children: [
-          Container( // Backgroud cua onbording
+          Container(
+            padding: EdgeInsets.only(bottom: 50),
+            // Backgroud cua onbording
             height: double.infinity,
             width: double.infinity,
             decoration: BoxDecoration(
                 image: DecorationImage(
                     image: AssetImage("assets/img1.png"), fit: BoxFit.cover)),
-          ),
-          Positioned(
-            bottom: 50,
-            left: 28,
-            child:Column(
+            child: Column(
               mainAxisAlignment: MainAxisAlignment.end,
               children: [
                 Icon(
@@ -48,23 +47,16 @@ class _OnbordingpageState extends State<Onbordingpage> {
                 SizedBox(
                   height: 20,
                 ),
-                Text("  Welcome \nto our store",
-                    style: TextStyle(
-                      fontWeight: FontWeight.bold,
-                      fontFamily: "Gilroy",
-                      fontSize: 30,
-                      color: Colors.white,
-                    )),
+                CustomTextGilroy_Bold(
+                  text: "  Welcome \nto our store",
+                  size: 30,
+                  color: Colors.white,
+                ),
                 SizedBox(
                   height: 10,
                 ),
-                Text("Ger your groceries in as fast as one hour",
-                    style: TextStyle(
-                      fontFamily: "Gilroy",
-                      fontWeight: FontWeight.w200,
-                      fontSize: 15,
-                      color: Colors.white,
-                    )),
+                CustomTextGilroy(text:"Ger your groceries in as fast as one hour",
+                  color: Colors.white,size: 15,),
                 SizedBox(
                   height: 20,
                 ),
@@ -76,15 +68,12 @@ class _OnbordingpageState extends State<Onbordingpage> {
                     width: 330,
                     child: TextButton(
                         onPressed: () {
-                          Navigator.push(
-                              context,
-                              MaterialPageRoute(
-                                  builder: (context) => Home()));
+                          Navigator.push(context,
+                              MaterialPageRoute(builder: (context) => Home()));
                         },
-                        child: Text(
+                        child: CustomTextGilroy_Bold(text:
                           "Get Started",
-                          style: TextStyle(
-                              color: Color.fromRGBO(255, 249, 255, 1)),
+                         color: Colors.white,
                         ))),
               ],
             ),
