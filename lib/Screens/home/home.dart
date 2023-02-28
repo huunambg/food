@@ -2,9 +2,9 @@ import 'dart:convert';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:foob_ok/Screens/detail/detail.dart';
+import 'package:foob_ok/Screens/home/components/cusstom_appbar.dart';
 import 'package:foob_ok/Screens/onbording/onbording.dart';
 import 'package:foob_ok/model/data.dart';
-import 'package:foob_ok/widgets/cusstom_appbar.dart';
 import 'package:foob_ok/widgets/custom_bottombar.dart';
 import 'package:foob_ok/widgets/custom_button.dart';
 import 'package:foob_ok/widgets/custom_text.dart';
@@ -67,35 +67,7 @@ class _HomepageState extends State<Homepage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        appBar: AppBar(
-          //appbar
-          toolbarHeight: 100,
-          elevation: 0,
-          backgroundColor: Colors.transparent,
-          foregroundColor: Colors.black,
-          centerTitle: true,
-          title: Column(
-            children: [
-              Image.asset(
-                "assets/carrot.png",
-                height: 30,
-                width: 30,
-              ),
-              SizedBox(
-                height: 10,
-              ),
-              Row(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                  Icon(Icons.place),
-                  CustomTextGilroy_Bold(
-                    text: "Dhaka, Banassre",
-                  )
-                ],
-              )
-            ],
-          ),
-        ),
+        appBar: CusstomAppBar(context),
         body: ListView(
           padding: EdgeInsets.all(15),
           children: [
